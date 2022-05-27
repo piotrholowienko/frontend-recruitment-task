@@ -12,6 +12,7 @@ body {
 h1 {
     margin: 0;
     font-weight: 700; 
+    font-size: 42px;
 }
 
 .global-wrapper{
@@ -82,7 +83,102 @@ h1 {
                 height: 48px;
                 font-size: 16px;
                 color: $white;
+                cursor: pointer;
             }
+            button:hover{
+               background-color: $white;
+               border: $primary 4px solid;
+               color: $primary;
+               transition: 300ms;
+            }
+        }
+    }
+
+    
+}
+
+.popup{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $opacited;
+    z-index: 50;
+
+    &.popup-non-active{
+        display: none;
+    }
+
+    .popup-main{
+        width: 80%;
+        height: 210px;
+        z-index: 150px;
+        position: relative;
+        background-color: $white;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 46px 46px 56px 95px;
+
+        // display: flex;
+        // flex-direction: column;
+ 
+        p{
+            margin: 26px 0 0 0;
+
+            @media(max-width: 900px) {
+                margin: 0;
+            }
+        }
+
+        .bolded{
+            font-weight: 700;
+        }
+        
+        .fa-solid.fa-x{
+            width: 100%;
+            text-align: right;
+            cursor: pointer;
+            font-size: 16px;
+
+            @media(max-width: 900px) {
+                
+                padding: 0 20px;
+            }
+        }
+
+        .restart-button{
+            
+                font-weight: 700;
+                background: $dark;
+                border-radius: 32px;
+                border: none;
+                width: 128px;
+                height: 28px;
+                font-size: 16px;
+                color: $white;
+                cursor: pointer;
+                margin-top: 10px;
+           
+            &.button-non-active{
+                display: none;
+            }
+        }
+
+        .restart-button:hover{
+            background-color: $white;
+            border: $dark 2px solid;
+            color: $dark;
+            transition: 300ms;
+         }
+
+        @media(max-width: 900px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            padding: 0;
         }
     }
 }

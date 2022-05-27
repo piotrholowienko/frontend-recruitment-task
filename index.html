@@ -11,6 +11,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <!-- fonts import  -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="global-wrapper">
@@ -24,10 +28,22 @@
             <div class="text-container">
                 <h1>Lorem ipsum</h1>
                 <p>Infinitely scalable, feature-rich and cloud-native data management and protection for modern and legacy infrastructures and SaaS platforms, managed via a single app with no hardware required.</p>
-                <button>Button</button>
+                <button class="button">Button</button>
+                
             </div>
         </div>
-        
+
     </div>
 
+    <div class="popup popup-non-active">
+        <div class="popup-background"></div>
+        <div class="popup-main">
+            <i class="fa-solid fa-x closingIcon"></i>
+            <h1>Alert!</h1>
+            <p>You have clicked <span class="bolded"><span id="counter-value"></span> times</span> to related button.</p>
+            <button class="restart-button button-non-active">Reset counter</button>
+        </div>
+    </div>
+
+    <script src="/src/js/buttonClick.js"></script>
 </body>

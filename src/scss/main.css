@@ -10,6 +10,7 @@ body {
 h1 {
   margin: 0;
   font-weight: 700;
+  font-size: 42px;
 }
 
 .global-wrapper {
@@ -91,4 +92,99 @@ h1 {
   height: 48px;
   font-size: 16px;
   color: #fff;
+  cursor: pointer;
+}
+
+.global-wrapper .section .text-container button:hover {
+  background-color: #fff;
+  border: #E4C1AE 4px solid;
+  color: #E4C1AE;
+  transition: 300ms;
+}
+
+.popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 50;
+}
+
+.popup.popup-non-active {
+  display: none;
+}
+
+.popup .popup-main {
+  width: 80%;
+  height: 210px;
+  z-index: 150px;
+  position: relative;
+  background-color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 46px 46px 56px 95px;
+}
+
+.popup .popup-main p {
+  margin: 26px 0 0 0;
+}
+
+@media (max-width: 900px) {
+  .popup .popup-main p {
+    margin: 0;
+  }
+}
+
+.popup .popup-main .bolded {
+  font-weight: 700;
+}
+
+.popup .popup-main .fa-solid.fa-x {
+  width: 100%;
+  text-align: right;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+@media (max-width: 900px) {
+  .popup .popup-main .fa-solid.fa-x {
+    padding: 0 20px;
+  }
+}
+
+.popup .popup-main .restart-button {
+  font-weight: 700;
+  background: #121212;
+  border-radius: 32px;
+  border: none;
+  width: 128px;
+  height: 28px;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.popup .popup-main .restart-button.button-non-active {
+  display: none;
+}
+
+.popup .popup-main .restart-button:hover {
+  background-color: #fff;
+  border: #121212 2px solid;
+  color: #121212;
+  transition: 300ms;
+}
+
+@media (max-width: 900px) {
+  .popup .popup-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0;
+  }
 }
