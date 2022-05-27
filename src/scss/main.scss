@@ -164,6 +164,10 @@ h1 {
             &.button-non-active{
                 display: none;
             }
+
+            @media(max-width: 900px) {
+                font-size: 12px;
+            }
         }
 
         .restart-button:hover{

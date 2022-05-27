@@ -172,6 +172,12 @@ h1 {
   display: none;
 }
 
+@media (max-width: 900px) {
+  .popup .popup-main .restart-button {
+    font-size: 12px;
+  }
+}
+
 .popup .popup-main .restart-button:hover {
   background-color: #fff;
   border: #121212 2px solid;
